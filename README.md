@@ -28,27 +28,33 @@ The system bridges the gap between active transactional technical tasks (`sc_tas
 
 ### Phase 1: Flow Metadata Initialization
 The development framework initialized under global scope execution permissions running as System User to grant full backend platform write privileges to strict database records. 
-![Flow Properties](01_Flow_Properties.png)
+<img width="1920" height="945" alt="01_Flow_Properties" src="https://github.com/user-attachments/assets/e9c50465-ba07-4a1a-b005-ee4bc892fcc8" />
+
 
 ### Phase 2: Staging Work Area
 Baseline canvas initialization prior to injecting event listener triggers or business logic models. 
-![Blank Flow Canvas](02_Blank_Flow_Canvas.png)
+<img width="1920" height="947" alt="02_Blank_Flow_Canvas" src="https://github.com/user-attachments/assets/c2dad9d9-59ca-4c90-b928-1283c04cf30d" />
+
 
 ### Phase 3: Event Target Definition
 Granular conditioning layout limiting execution boundaries to specific high-privilege configuration milestones. 
-![Flow Trigger](03_Flow_Trigger.png)
+<img width="1920" height="944" alt="03_Flow_Trigger" src="https://github.com/user-attachments/assets/2f28d5d1-1853-459e-aa9d-1880d163b6e0" />
+
 
 ### Phase 4: Core Action Injection
 Targeting the ITIL Core structural tables inside the configuration storage layer of the instance. 
-![Create Record Action](04_Create_Record_Action.png)
+<img width="1920" height="942" alt="04_Create_Record_Action" src="https://github.com/user-attachments/assets/74e3f73d-72a3-402d-8fe2-c0de7898a461" />
+
 
 ### Phase 5: Complex Data Matrix Mapping
 Utilizing automated variable dot-walking mechanics to bridge frontend catalog item request variables directly with backend data properties. 
-![Mapped Asset Fields](05_Mapped_Asset_Fields.png)
+<img width="1920" height="944" alt="05_Mapped_Asset_Fields" src="https://github.com/user-attachments/assets/33356a5a-5b66-4505-beb4-c5efdce3c2f9" />
+
 
 ### Phase 6: System Test Execution Verification
 Successful data serialization trace showcasing comprehensive execution across the data flow pipeline. Both components report clean structural feedback states. 
-![Flow Test Execution](06_Flow_Test_Execution.png)
+<img width="1920" height="940" alt="06_Flow_Test_Execution" src="https://github.com/user-attachments/assets/79874f71-c969-4d7c-aaca-71c68c1b7a1e" />
+
 
 ---
 
