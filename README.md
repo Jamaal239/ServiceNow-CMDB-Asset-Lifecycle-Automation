@@ -60,17 +60,17 @@ Successful data serialization trace showcasing comprehensive execution across th
 
 ## 🛠️ Real-World Engineering Insights
 
-### 🔍 Operational Issues Solved
-* **Configuration Drift & Blindspots:** Eliminated manual delays where infrastructure engineers provisioned virtual environments but forgot to log them into the asset tracking database, resulting in a fractured state of truth.
-* **Human Data-Entry Errors:** Prevented inconsistent naming conventions and typo-ridden username associations by locking down the CI name schema to a hardcoded format (`VDI-`) joined dynamically to systemic database values.
-* **Database Performance Bloat:** Mitigated recursive workflow loops and database performance degradation by setting the execution trigger behavior to evaluate exactly `Once` per record update lifecycle step instead of continuously evaluating on subsequent notes updates.
+### 🔍 Problems I Solved
+* **Fixed Tracking Blindspots:** Stopped the common issue where IT technicians manually build a virtual machine but forget to update the inventory database, which usually leaves a team guessing who owns what.
+* **Eliminated Manual Typos:** Saved the service desk from data-entry mistakes by locking down the asset names to a clean format (`VDI-`) that fills itself in automatically using real system data.
+* **Protected Database Performance:** Kept the system running fast by telling the automation to trigger exactly *once* when a task completes, rather than re-running over and over every time someone adds a comment.
 
-### 💡 Core Engineering Takeaways
-* **Data Hierarchy & Dot-Walking Navigation:** Mastered structural table inheritance and variable traversal across parent-child structures (such as scaling from an explicit `sc_task` upward through the parent `sc_req_item` variables to fetch root user identity records).
-* **Defensive Automation Principles:** Learned to design workflows with narrow criteria boundaries (matching explicit `Short Description` text fields strings) to protect multi-purpose catalog tables from firing automated scripts on irrelevant tasks.
-* **Automated Asset Provisioning Tracing:** Acquired deep workspace analytical experience tracing execution variables inside the Flow Execution dashboard, observing structural outputs, runtime state metrics, and step-by-step table write operations.
+### 💡 Core Things I Learned
+* **Table Relations & Dot-Walking:** Mastered how to grab data across different tables (like pulling a user's original account name from a Request variable all the way down into an active Catalog Task).
+* **Defensive Automation:** Learned how to set strict trigger rules (like matching an exact short description) so my automation only runs when it is supposed to, instead of accidentally triggering on unrelated IT tickets.
+* **Debugging Workflows:** Gained experience using the Flow Execution dashboard to trace data variables, read error messages, and verify that the database successfully created the records.
 
-### 🏢 Corporate Application Instances
-* **Zero-Touch Employee Onboarding:** In an enterprise environment, this flow allows a new hire's virtual workstation instance to be auto-provisioned and tracked within the global IT corporate inventory immediately when a technician clicks "Complete" on their setup ticket, without demanding a separate data-logging cycle.
-* **Software Licensing & Audit Compliance:** Ensures corporate IT compliance records possess immediate visibility over active hardware allocations. This is critical for internal compliance checks, tracking dynamic endpoint licensing counts, and validating actual asset counts during major technical vendor audits.
-* **Rapid Security Incident Scoping:** If a virtual machine is identified as compromised on the enterprise network, security teams can instantaneously pull the corresponding CI from the CMDB database to locate exactly which internal corporate user is associated with that machine, reducing mean time to response (MTTR).
+### 🏢 How This Applies to Real Enterprise IT
+* **Faster Employee Onboarding:** The second a technician finishes setting up a new hire's virtual desktop, the computer is logged into global inventory automatically. No double-data entry needed.
+* **Audit & Asset Accuracy:** Keeps the company's hardware records perfectly accurate, which is essential for tracking IT budgets, software licenses, and prepping for official company audits.
+* **Quick Security Tracking:** If a machine behaves suspiciously or gets compromised on the network, security teams can search the CMDB instantly to see exactly who that asset belongs to, speeding up response times.
