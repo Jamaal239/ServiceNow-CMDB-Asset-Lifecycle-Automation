@@ -27,32 +27,30 @@ The system bridges the gap between active transactional technical tasks (`sc_tas
 ## 📸 Step-by-Step Configuration & Verification
 
 ### Phase 1: Flow Metadata Initialization
-The development framework initialized under global scope execution permissions running as System User to grant full backend platform write privileges to strict database records. 
+The flow was configured within the Global Scope and set to run as "System User." This ensures the automation has the proper backend permissions to write data directly to the CMDB tables without being blocked by security constraints.
 <img width="1920" height="945" alt="01_Flow_Properties" src="https://github.com/user-attachments/assets/e9c50465-ba07-4a1a-b005-ee4bc892fcc8" />
 
 
-### Phase 2: Staging Work Area
-Baseline canvas initialization prior to injecting event listener triggers or business logic models. 
+### Phase 2: Flow Canvas Staging
+A clean baseline workspace was established in Workflow Studio to organize our trigger logic and subsequent record actions.
 <img width="1920" height="947" alt="02_Blank_Flow_Canvas" src="https://github.com/user-attachments/assets/c2dad9d9-59ca-4c90-b928-1283c04cf30d" />
 
-
-### Phase 3: Event Target Definition
-Granular conditioning layout limiting execution boundaries to specific high-privilege configuration milestones. 
+### Phase 3: Trigger Condition Mapping
+Set the automation to monitor the Catalog Task `[sc_task]` table. It triggers exclusively when a task state changes to "Closed Complete" and the Short Description matches "Configure VDI Environment for User."
 <img width="1920" height="944" alt="03_Flow_Trigger" src="https://github.com/user-attachments/assets/2f28d5d1-1853-459e-aa9d-1880d163b6e0" />
 
-
-### Phase 4: Core Action Injection
-Targeting the ITIL Core structural tables inside the configuration storage layer of the instance. 
+### Phase 4: Create Record Action Injection
+Added a core platform action to target the ServiceNow CMDB Computer table `[cmdb_ci_computer]`, which tells the system exactly where to create the new asset record.
 <img width="1920" height="942" alt="04_Create_Record_Action" src="https://github.com/user-attachments/assets/74e3f73d-72a3-402d-8fe2-c0de7898a461" />
 
 
-### Phase 5: Complex Data Matrix Mapping
-Utilizing automated variable dot-walking mechanics to bridge frontend catalog item request variables directly with backend data properties. 
+### Phase 5: Data Pill & Dot-Walking Mapping
+Mapped the field values for the new asset record. Used dot-walking to pull the user's name directly from the parent requested item variables, dynamically creating a unique asset name (`VDI-{{User Name}}`) and assigning ownership.
 <img width="1920" height="944" alt="05_Mapped_Asset_Fields" src="https://github.com/user-attachments/assets/33356a5a-5b66-4505-beb4-c5efdce3c2f9" />
 
 
-### Phase 6: System Test Execution Verification
-Successful data serialization trace showcasing comprehensive execution across the data flow pipeline. Both components report clean structural feedback states. 
+### Phase 6: Flow Execution Testing & Verification
+Ran a sandbox test using a sample catalog task record. Checked the Flow Execution Details dashboard to verify that all operations completed successfully with zero data truncation or lookup faults.
 <img width="1920" height="940" alt="06_Flow_Test_Execution" src="https://github.com/user-attachments/assets/79874f71-c969-4d7c-aaca-71c68c1b7a1e" />
 
 
